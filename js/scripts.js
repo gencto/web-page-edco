@@ -26,8 +26,9 @@ document.addEventListener("DOMContentLoaded", function() {
     const switchLanguage = (lang) => {
         localStorage.setItem("selectedLanguage", lang);
         currentLanguage.textContent = lang === "uk" ? "Ukr" : "Eng"; // Обновляем отображаемый язык
-        loadLanguage(lang);
-        languageOptions.style.display = "none";
+        loadLanguage(lang).then(() => {
+            languageOptions.style.display = "none";
+        });
     };
 
     // Получаем выбранный язык из localStorage или устанавливаем по умолчанию

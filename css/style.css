@@ -218,6 +218,7 @@
 .buttons .div div {
   cursor: pointer;
 }
+
 .div {
   display: flex;
   flex-direction: row;
@@ -375,6 +376,12 @@
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   z-index: 2;
+  color: #000;
+  font-family: var(--btn-text-font-family, "Manrope-SemiBold", sans-serif);
+  font-size: var(--btn-text-font-size, 16px);
+  line-height: var(--btn-text-line-height, 28px);
+  letter-spacing: var(--btn-text-letter-spacing, 0.02em);
+  font-weight: var(--btn-text-font-weight, 600);
 }
 
 .language-options div {
@@ -431,6 +438,7 @@
   left: 64px;
   top: 569px;
   cursor: pointer;
+  z-index: 1;
 }
 
 .div2 {
@@ -502,6 +510,7 @@
   top: 435px;
   width: 300px;
   height: 84px;
+  z-index: 1;
 }
 
 .divide {
@@ -559,6 +568,7 @@
   display: flex;
   align-items: center;
   justify-content: flex-start;
+  word-wrap: break-word
 }
 
 .advantages {
@@ -582,8 +592,8 @@
   justify-content: flex-start;
   flex-wrap: wrap;
   flex-shrink: 0;
-  width: 1920px;
   position: relative;
+  flex-wrap: wrap;
 }
 
 .title2 {
@@ -715,40 +725,29 @@
   background: var(--light-grey, #f7f8f9);
   align-self: stretch;
   flex-shrink: 0;
-  height: 426px;
   position: relative;
+  padding: 44px 64px 44px 64px;
+  gap: 20px;
 }
 
-.div5 {
-  color: var(--black2, #323232);
-  text-align: left;
-  font-family: var(--slogan-font-family, "Manrope-ExtraLight", sans-serif);
-  font-size: var(--slogan-font-size, 110px);
-  letter-spacing: var(--slogan-letter-spacing, 0.02em);
-  font-weight: var(--slogan-font-weight, 200);
-  text-transform: uppercase;
-  position: absolute;
-  left: 64px;
-  top: 71px;
-  display: flex;
-  align-items: center;
-  justify-content: flex-start;
-}
-
+.div5,
 .div6 {
   color: var(--black2, #323232);
   text-align: left;
   font-family: var(--slogan-font-family, "Manrope-ExtraLight", sans-serif);
   font-size: var(--slogan-font-size, 110px);
-  letter-spacing: var(--slogan-letter-spacing, 0.02em);
-  font-weight: var(--slogan-font-weight, 200);
+  letter-spacing: var(--slogan-letter-spacing, 2.2px);
+  font-weight: var(--slogan-font-weight, 250);
   text-transform: uppercase;
-  position: absolute;
-  left: 366px;
-  top: 205px;
+  position: relative;
   display: flex;
   align-items: center;
   justify-content: flex-start;
+  margin: 0;
+}
+
+.div6 {
+  left: 305px;
 }
 
 .product {
@@ -770,6 +769,7 @@
   align-items: center;
   justify-content: center;
 }
+
 .content2 {
   display: flex;
   flex-direction: column;
@@ -833,7 +833,6 @@
   font-weight: var(--h3-font-weight, 700);
   position: relative;
   width: 672px;
-  height: 49px;
 }
 
 .text-block {
@@ -1140,13 +1139,9 @@
 .body8 {
   display: flex;
   flex-direction: row;
-  gap: 197px;
-  align-items: center;
-  justify-content: center;
-  position: absolute;
-  left: 64px;
-  right: 64px;
-  bottom: 80px;
+  gap: 10px;
+  align-items: flex-start;
+  justify-content: space-between;
 }
 
 .text {
@@ -1216,9 +1211,6 @@
   gap: 20px;
   align-items: flex-start;
   justify-content: flex-start;
-  position: absolute;
-  left: calc(50% - 830px);
-  top: calc(50% - 203px);
 }
 
 .industries {
@@ -1393,26 +1385,22 @@
 }
 
 .model {
-  padding: 80px 64px 80px 64px;
+  padding: 80px 64px;
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   gap: 94px;
-  align-items: flex-start;
+  align-items: center;
   justify-content: center;
-  flex-wrap: wrap;
-  align-self: stretch;
-  flex-shrink: 0;
   position: relative;
 }
 
 .header4 {
-  padding: 44px 0px 44px 0px;
+  padding: 44px 0;
   display: flex;
   flex-direction: row;
   gap: 10px;
   align-items: flex-start;
   justify-content: flex-start;
-  flex-shrink: 0;
   width: 358px;
   position: relative;
 }
@@ -1426,7 +1414,6 @@
   letter-spacing: var(--h2-letter-spacing, 0.02em);
   font-weight: var(--h2-font-weight, 400);
   text-transform: uppercase;
-  position: relative;
   width: 360px;
   height: 104px;
   display: flex;
@@ -1438,27 +1425,25 @@
   display: flex;
   flex-direction: row;
   gap: 22px;
-  align-items: flex-start;
-  justify-content: flex-start;
+  align-items: center;
+  justify-content: center;
   flex-wrap: wrap;
-  flex-shrink: 0;
-  width: 1339px;
   position: relative;
 }
 
 .block-info {
+  width: 417px;
   border-style: solid;
   border-color: var(--blue-1, #192396);
-  border-width: 0px 0px 0px 1px;
-  padding: 30px 0px 0px 15px;
+  border-width: 0 0 0 1px;
+  padding: 30px 15px 0;
   display: flex;
   flex-direction: column;
   gap: 20px;
   align-items: flex-start;
   justify-content: flex-start;
-  flex: 1;
   height: 280px;
-  position: relative;
+  box-sizing: border-box;
 }
 
 ._103 {
@@ -1489,9 +1474,10 @@
   width: 100%;
   align-self: stretch;
   flex-shrink: 0;
-  height: 594px;
+  min-height: 594px;
   position: relative;
   flex-direction: row;
+  flex-wrap: wrap;
   justify-content: space-between;
   align-items: flex-start;
 }
@@ -1512,14 +1498,34 @@
   justify-content: center;
   flex: 1;
   height: 100%;
-  max-width: calc(100% - 735px);
+  padding: 30px 30px 30px 30px;
 }
 
-.form2 .inner-content {
+.button2 {
   display: flex;
+  align-items: center;
   justify-content: center;
-  flex-direction: column;
-  gap: 36px;
+  cursor: pointer;
+  padding: 15px 30px;
+  background: #000;
+  color: #fff;
+  border-radius: 50px;
+  font-size: 16px;
+  font-weight: 600;
+  border: 2px solid #000;
+  text-decoration: none;
+  transition: background 0.3s, color 0.3s;
+}
+
+.button2:hover {
+  background: #fff;
+  color: #000;
+}
+
+.button2 img {
+  margin-left: 10px;
+  width: 16px;
+  height: 16px;
 }
 
 
@@ -1595,6 +1601,13 @@
   align-self: stretch;
   flex-shrink: 0;
   position: relative;
+  color: #BBBBBB;
+  font-size: 16px;
+  font-family: Manrope;
+  font-weight: 600;
+  line-height: 28px;
+  letter-spacing: 0.32px;
+  word-wrap: break-word
 }
 
 .name {
@@ -1715,7 +1728,6 @@
   align-items: flex-start;
   justify-content: flex-start;
   flex-shrink: 0;
-  width: 282px;
   position: relative;
 }
 
@@ -1959,7 +1971,7 @@
   align-items: flex-start;
   justify-content: space-between;
   flex: 2;
-  gap: 10px;
+  gap: 12px;
   position: relative;
 }
 
@@ -2258,4 +2270,179 @@
   height: 16px;
   position: relative;
   overflow: visible;
+}
+
+.consult-content {
+  display: flex;
+  flex-direction: column;;
+  justify-content: space-between;
+  width: 100%;
+  height: 100%;
+  padding: 80px 64px 80px 64px;
+}
+
+/* Media Queries for Responsive Design */
+@media (max-width: 1200px) {
+
+  .div5,
+  .div6 {
+    font-size: 80px;
+  }
+  .div6 {
+    left: 150px;
+  }
+
+  .footer {
+    padding: 80px 64px 80px 64px;
+  }
+  .header3 {
+    width: 260px;
+  }
+  .title {
+    font-size: 42px;
+    width: 412px; 
+    height: 216px;
+    line-height: 46px;
+  }
+}
+
+@media (max-width: 768px) {
+
+  .header2 {
+    display: none;
+  }
+  .dispatcher {
+    width: 100%;
+  }
+
+  .title4 {
+    width: 100%;
+    font-size: 34px;
+  }
+  .dispatcher {
+    width: 308px;
+    gap: 18px;
+  }
+  .title7 {
+    font-size: 36px;
+    line-height: 42px;
+  }
+
+  .div6 {
+    left: 0px;
+  }
+  .footer {
+    padding: 38px 24px 0px 24px;
+  }
+
+  .div5,
+  .div6 {
+    font-size: 60px;
+  }
+
+  .contact {
+    flex-direction: column;
+    gap: 36px;
+  }
+
+  .contact2,
+  .left {
+    flex-direction: row;
+  }
+  .content2 {
+    gap: 18px;
+  }
+  .menus {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .menus div {
+    max-width: 100%;
+  }
+
+  .header4 {
+    align-self: center;
+    justify-content: center;
+    width: 100%;
+  }
+
+  .description2 {
+    padding: 16px 16px 16px 16px;
+  }
+
+  .title8,
+  .header5 {
+    width: 100%;
+  }
+
+
+  .body8 {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    gap: 32px;
+  }
+
+  .consult {
+    height: 754px;
+  }
+  .consult-content {
+    flex-direction: row;
+    padding: 38px 24px 38px 24px;
+  }
+  .product {
+    height: 913px;
+  }
+
+}
+
+@media (max-width: 480px) {
+  .dispatcher{
+    width: 100%;
+  }
+  .title4 {
+    width: 100%;
+    font-size: 24px;
+  }
+  .title7 {
+    font-size: 24px;
+    line-height: 28px;
+  }
+
+  .block-info {
+    padding: 20px 10px 0;
+  }
+
+  .footer {
+    padding: 32px 16px 0px 16px;
+  }
+
+  .div5,
+  .div6 {
+    font-size: 40px;
+  }
+
+  .contact2 {
+    flex-direction: column;
+  }
+
+  .block-info {
+    flex: 1 1 calc(100% - 22px);
+  }
+
+  .contact {
+    gap: 18px;
+  }
+
+  .model {
+    width: 100%;
+  }
+
+  .consult-content {
+    flex-direction: column;
+  }
 }
