@@ -20,18 +20,20 @@
   display: flex;
   flex-direction: row;
   align-items: center;
-  justify-content: flex-start;
+  justify-content: space-between;
   align-self: stretch;
   flex-shrink: 0;
-  height: 96px;
   position: relative;
   width: 100%;
 }
+
 .menu-title {
   display: none;
   color: var(--black, #000000);
-  text-align: left;
   font-family: "Manrope-Regular", sans-serif;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
   font-size: 18px;
   letter-spacing: 0.002em;
   font-weight: 400;
@@ -43,7 +45,7 @@
   min-height: 68px;
 }
 
-.logo div img, .logo div {
+.logo img {
   width: 100%;
   height: 100%;
   object-fit: cover;
@@ -73,12 +75,12 @@
 .menu {
   display: flex;
   flex-direction: row;
-  gap: 40px;
   align-items: center;
   justify-content: center;
   flex-wrap: nowrap;
   flex: 1;
   height: 22px;
+  max-width: 520px;
 }
 
 .link {
@@ -93,6 +95,7 @@
   text-align: left;
   font-family: "Manrope-Regular", sans-serif;
   font-size: 18px;
+  text-align: center;
   letter-spacing: 0.002em;
   font-weight: 400;
   cursor: pointer;
@@ -110,6 +113,18 @@
 
 .buttons .div div {
   cursor: pointer;
+}
+
+.buttons .setting {
+  display: none;
+  cursor: pointer;
+  border-radius: 48px;
+  border: 1px solid #000;
+  width: 48px;
+  height: 48px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .div {
@@ -751,6 +766,7 @@
 }
 
 .list {
+  list-style-type: none;
   display: flex;
   flex-direction: column;
   gap: 8px;
@@ -761,22 +777,8 @@
   position: relative;
 }
 
-.txt {
-  padding: 0px 0px 0px 12px;
-  display: flex;
-  flex-direction: row;
-  gap: 12px;
-  align-items: flex-start;
-  justify-content: flex-start;
-  align-self: stretch;
-  flex-shrink: 0;
-  position: relative;
-  overflow: hidden;
-}
-
-.div8 {
+.list li {
   color: var(--black-2, #323232);
-  text-align: left;
   font-family: var(--description-font-family, "Manrope-Regular", sans-serif);
   font-size: var(--description-font-size, 16px);
   line-height: var(--description-line-height, 20px);
@@ -784,44 +786,10 @@
   position: relative;
 }
 
-.frame-2 {
-  flex-shrink: 0;
-  width: 8px;
-  height: 8px;
-  position: absolute;
-  left: 0px;
-  top: calc(50% - 4px);
-}
-
-.ellipse-2 {
-  width: 6px;
-  height: 6px;
-  position: absolute;
-  left: calc(50% - 3px);
-  top: calc(50% - 3px);
-}
-
-.ellipse-1 {
-  background: var(--blue-1, #192396);
-  border-radius: 50%;
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  right: 0%;
-  left: 0%;
-  bottom: 0%;
-  top: 0%;
-}
-
-.div9 {
-  color: var(--black-2, #323232);
-  text-align: left;
-  font-family: var(--description-font-family, "Manrope-Regular", sans-serif);
-  font-size: var(--description-font-size, 16px);
-  line-height: var(--description-line-height, 20px);
-  font-weight: var(--description-font-weight, 400);
-  position: relative;
-  flex: 1;
+.list li::before {
+  content: '\2022';
+  color: blue;
+  font-size: 1.2em;
 }
 
 .white-screen {
@@ -1011,7 +979,7 @@
 .consult {
   align-self: stretch;
   flex-shrink: 0;
-  height: 614px;
+  height: auto;
   position: relative;
   overflow: hidden;
 }
@@ -1034,7 +1002,7 @@
   flex-direction: row;
   gap: 10px;
   align-items: flex-start;
-  justify-content: space-between;
+  justify-content: space-around;
 }
 
 .text {
@@ -1110,9 +1078,8 @@
   padding: 80px 64px 80px 64px;
   display: flex;
   flex-direction: row;
-  gap: 151px;
-  align-items: center;
-  justify-content: center;
+  align-items: start;
+  justify-content: space-around;
   align-self: stretch;
   flex-shrink: 0;
   position: relative;
@@ -1280,7 +1247,7 @@
 .model {
   padding: 80px 64px;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   gap: 94px;
   align-items: center;
   justify-content: center;
@@ -2167,6 +2134,7 @@
 
 .consult-content {
   display: flex;
+  gap: 68px;
   flex-direction: column;
   justify-content: space-between;
   width: 100%;
@@ -2203,22 +2171,61 @@
 }
 
 @media (max-width: 768px) {
+  .digitalization {
+    width: auto;
+  }
 
-  .link {
+  .title5 {
+    font-size: var(--h3-font-size, 34px);
+    line-height: var(--h3-line-height, 110%);
+  }
+
+  .content,
+  .body3 {
+    justify-content: center;
+    gap: 12px;
+  }
+
+  .management-info {
+    flex-direction: column;
+    align-items: start;
+    height: auto;
+    gap: 32px;
+  }
+
+  .h-info {
+    flex-direction: column;
+  }
+
+  .h-info div {
+    width: 100%;
+    gap: 32px;
+  }
+
+  .link,
+  .buttons .div {
     display: none;
   }
+
+  .buttons .setting {
+    display: flex;
+  }
+
   .menu-title {
-    display: block;
+    display: flex;
     width: 100px;
     height: 32px;
   }
+
   .main-menu {
-    padding: 16px 24px 0px 24px;
-  } 
+    padding: 16px 24px 16px 24px;
+  }
+
   .logo {
     width: 94px;
-    height: 48px; 
+    height: 48px;
   }
+
   .header2 {
     display: none;
   }
@@ -2294,7 +2301,6 @@
     width: 100%;
   }
 
-
   .body8 {
     display: flex;
     width: 100%;
@@ -2314,20 +2320,21 @@
   }
 
   .product {
-    height: 913px;
+    height: auto;
   }
 
 }
 
 @media (max-width: 480px) {
   .main-menu {
-    padding: 16px 16px 0px 16px;
+    padding: 16px 16px 16px 16px;
   }
+
   .logo {
     width: 94px;
-    height: 48px; 
+    height: 48px;
   }
-  
+
   .dispatcher {
     width: 100%;
   }
