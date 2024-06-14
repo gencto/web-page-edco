@@ -18,43 +18,35 @@
   background: #ffffff;
   padding: 16px 64px 16px 64px;
   display: flex;
-  flex-direction: column;
-  gap: 8px;
+  flex-direction: row;
   align-items: center;
   justify-content: flex-start;
   align-self: stretch;
   flex-shrink: 0;
   height: 96px;
   position: relative;
+  width: 100%;
 }
-
-.container {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: space-between;
-  align-self: stretch;
-  flex-shrink: 0;
-  height: 72px;
-  position: relative;
+.menu-title {
+  display: none;
+  color: var(--black, #000000);
+  text-align: left;
+  font-family: "Manrope-Regular", sans-serif;
+  font-size: 18px;
+  letter-spacing: 0.002em;
+  font-weight: 400;
+  cursor: pointer;
 }
 
 .logo {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-  align-items: flex-start;
-  justify-content: center;
-  flex-shrink: 0;
-  position: relative;
+  min-width: 132px;
+  min-height: 68px;
 }
 
-.e-dco-logo-black {
-  flex-shrink: 0;
-  width: 132px;
-  height: 68px;
-  position: relative;
-  overflow: hidden;
+.logo div img, .logo div {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 .union {
@@ -64,45 +56,6 @@
   left: 0px;
   top: 0px;
   overflow: visible;
-}
-
-.vector {
-  width: 11.36%;
-  height: 23.53%;
-  position: absolute;
-  right: 36.36%;
-  left: 52.27%;
-  bottom: 0%;
-  top: 76.47%;
-  overflow: visible;
-}
-
-.vector2 {
-  width: 9.85%;
-  height: 23.53%;
-  position: absolute;
-  right: 48.48%;
-  left: 41.67%;
-  bottom: 0%;
-  top: 76.47%;
-  overflow: visible;
-}
-
-.company {
-  width: 42px;
-  height: 9px;
-  position: absolute;
-  left: 86px;
-  top: 59px;
-  overflow: visible;
-}
-
-.copywrite {
-  width: 13.38px;
-  height: 13.38px;
-  position: absolute;
-  right: 1.62px;
-  top: 1px;
 }
 
 .black {
@@ -123,86 +76,26 @@
   gap: 40px;
   align-items: center;
   justify-content: center;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
   flex: 1;
   height: 22px;
-  position: relative;
-  min-width: 560px;
 }
 
-.links {
+.link {
   flex-shrink: 0;
-  width: 83px;
+  flex: 1;
+  width: auto;
   height: 25px;
-  position: relative;
 }
 
-.links div {
+.link {
+  color: var(--black, #000000);
+  text-align: left;
+  font-family: "Manrope-Regular", sans-serif;
+  font-size: 18px;
+  letter-spacing: 0.002em;
+  font-weight: 400;
   cursor: pointer;
-}
-
-.links2 {
-  color: var(--black, #000000);
-  text-align: left;
-  font-family: "Manrope-Regular", sans-serif;
-  font-size: 18px;
-  letter-spacing: 0.002em;
-  font-weight: 400;
-  position: absolute;
-  right: 0%;
-  left: 0%;
-  width: 100%;
-  bottom: 0%;
-  top: 0%;
-  height: 100%;
-}
-
-.links3 {
-  color: var(--black, #000000);
-  text-align: left;
-  font-family: "Manrope-Regular", sans-serif;
-  font-size: 18px;
-  letter-spacing: 0.002em;
-  font-weight: 400;
-  position: absolute;
-  right: 37.35%;
-  left: 0%;
-  width: 62.65%;
-  bottom: 0%;
-  top: 0%;
-  height: 100%;
-}
-
-.links4 {
-  color: var(--black, #000000);
-  text-align: left;
-  font-family: "Manrope-Regular", sans-serif;
-  font-size: 18px;
-  letter-spacing: 0.002em;
-  font-weight: 400;
-  position: absolute;
-  right: 28.92%;
-  left: 0%;
-  width: 71.08%;
-  bottom: 0%;
-  top: 0%;
-  height: 100%;
-}
-
-.links5 {
-  color: var(--black, #000000);
-  text-align: left;
-  font-family: "Manrope-Regular", sans-serif;
-  font-size: 18px;
-  letter-spacing: 0.002em;
-  font-weight: 400;
-  position: absolute;
-  right: 4.82%;
-  left: 0%;
-  width: 95.18%;
-  bottom: 0%;
-  top: 0%;
-  height: 100%;
 }
 
 .buttons {
@@ -2274,7 +2167,7 @@
 
 .consult-content {
   display: flex;
-  flex-direction: column;;
+  flex-direction: column;
   justify-content: space-between;
   width: 100%;
   height: 100%;
@@ -2288,6 +2181,7 @@
   .div6 {
     font-size: 80px;
   }
+
   .div6 {
     left: 150px;
   }
@@ -2295,12 +2189,14 @@
   .footer {
     padding: 80px 64px 80px 64px;
   }
+
   .header3 {
     width: 260px;
   }
+
   .title {
     font-size: 42px;
-    width: 412px; 
+    width: 412px;
     height: 216px;
     line-height: 46px;
   }
@@ -2308,9 +2204,25 @@
 
 @media (max-width: 768px) {
 
+  .link {
+    display: none;
+  }
+  .menu-title {
+    display: block;
+    width: 100px;
+    height: 32px;
+  }
+  .main-menu {
+    padding: 16px 24px 0px 24px;
+  } 
+  .logo {
+    width: 94px;
+    height: 48px; 
+  }
   .header2 {
     display: none;
   }
+
   .dispatcher {
     width: 100%;
   }
@@ -2319,10 +2231,12 @@
     width: 100%;
     font-size: 34px;
   }
+
   .dispatcher {
     width: 308px;
     gap: 18px;
   }
+
   .title7 {
     font-size: 36px;
     line-height: 42px;
@@ -2331,6 +2245,7 @@
   .div6 {
     left: 0px;
   }
+
   .footer {
     padding: 38px 24px 0px 24px;
   }
@@ -2349,9 +2264,11 @@
   .left {
     flex-direction: row;
   }
+
   .content2 {
     gap: 18px;
   }
+
   .menus {
     width: 100%;
     display: grid;
@@ -2390,10 +2307,12 @@
   .consult {
     height: 754px;
   }
+
   .consult-content {
     flex-direction: row;
     padding: 38px 24px 38px 24px;
   }
+
   .product {
     height: 913px;
   }
@@ -2401,13 +2320,23 @@
 }
 
 @media (max-width: 480px) {
-  .dispatcher{
+  .main-menu {
+    padding: 16px 16px 0px 16px;
+  }
+  .logo {
+    width: 94px;
+    height: 48px; 
+  }
+  
+  .dispatcher {
     width: 100%;
   }
+
   .title4 {
     width: 100%;
     font-size: 24px;
   }
+
   .title7 {
     font-size: 24px;
     line-height: 28px;
