@@ -2162,8 +2162,45 @@
   padding: 80px 64px 80px 64px;
 }
 
-/* Media Queries for Responsive Design */
 @media (max-width: 1200px) {
+  .management-info {
+    flex-direction: column;
+    align-items: start;
+    height: auto;
+    gap: 32px;
+  }
+
+  .palette,
+  .title6,
+  .images-containers {
+    width: 100%;
+  }
+
+  .title6 {
+    padding: 0px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .image1,
+  .image4,
+  .image5 {
+    width: 35%;
+    min-width: 150px;
+  }
+
+  .image2,
+  .image3,
+  .image6 {
+    width: 55%;
+    flex: 1;
+    min-width: 100px;
+  }
+
+  .industries {
+    flex-direction: column;
+    padding: 0px 24px 0px 24px;
+  }
 
   .div5,
   .div6 {
@@ -2191,29 +2228,16 @@
 }
 
 @media (max-width: 768px) {
-  .industries {
-    flex-direction: column;
-    padding: 0px 24px 0px 24px;
-  }
 
-  .palette,
-  .title6,
-  .images-containers {
+  .model {
     width: 100%;
+    gap: 0px;
+    padding: 32px 24px 32px 24px;
   }
 
-  .title6 {
-    padding: 0px;
-  }
-  .image1, .image4, .image5 {
-    width: 35%;
-    min-width: 227px;
-  }
-
-  .image2, .image3, .image6 {
-    width: 55%;
-    flex: 1;
-    min-width: 227px;
+  .product {
+    flex-wrap: wrap-reverse;
+    height: auto;
   }
 
   .digitalization {
@@ -2234,13 +2258,6 @@
   .body3 {
     justify-content: center;
     gap: 12px;
-  }
-
-  .management-info {
-    flex-direction: column;
-    align-items: start;
-    height: auto;
-    gap: 32px;
   }
 
   .h-info {
@@ -2278,10 +2295,6 @@
 
   .header2 {
     display: none;
-  }
-
-  .dispatcher {
-    width: 100%;
   }
 
   .title4 {
@@ -2337,9 +2350,10 @@
   }
 
   .header4 {
-    align-self: center;
-    justify-content: center;
-    width: 100%;
+    align-self: flex-start;
+    justify-content: start;
+    width: 242px;
+    padding: 0px;
   }
 
   .description2 {
@@ -2360,22 +2374,37 @@
     gap: 32px;
   }
 
-  .consult {
-    height: 754px;
-  }
-
   .consult-content {
     flex-direction: row;
     padding: 38px 24px 38px 24px;
   }
-
-  .product {
-    height: auto;
+  .menu {
+    gap: 0px;
   }
-
 }
 
 @media (max-width: 480px) {
+  .consult-content {
+    flex-direction: column;
+    padding: 32px 0px 32px 16px;
+  }
+
+  .model {
+    flex-direction: column;
+    width: 100%;
+    padding: 32px 24px 32px 24px;
+  }
+
+  .body9 {
+    gap: 0px;
+    height: auto;
+  }
+
+  .product {
+    flex-wrap: wrap-reverse;
+    height: auto;
+  }
+
   .main-menu {
     padding: 16px 16px 16px 16px;
   }
@@ -2383,10 +2412,6 @@
   .logo {
     width: 94px;
     height: 48px;
-  }
-
-  .dispatcher {
-    width: 100%;
   }
 
   .title4 {
@@ -2401,6 +2426,8 @@
 
   .block-info {
     padding: 20px 10px 0;
+    gap: 4px;
+    height: auto;
   }
 
   .footer {
@@ -2420,15 +2447,17 @@
     flex: 1 1 calc(100% - 22px);
   }
 
-  .contact {
-    gap: 18px;
+  ._103 {
+    font-size: 24px;
+    line-height: 32px;
   }
 
-  .model {
-    width: 100%;
+  .contact {
+    gap: 18px;
   }
 
   .consult-content {
     flex-direction: column;
   }
+
 }
