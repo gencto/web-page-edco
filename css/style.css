@@ -2438,12 +2438,12 @@
   .body9 {
     gap: 0px;
     height: auto;
+    flex-direction:column;
   }
 
   .product {
-    flex-direction: column-reverse;
+    padding: 0px 16px 0px 16px;
     height: auto;
-    padding: 0px;
     align-items: start;
     gap: 22px;
   }
@@ -2462,7 +2462,6 @@
   }
 
   .inner-content {
-    padding: 0px 0px 0px 16px;
     gap: 14px;
   }
 
@@ -2486,9 +2485,9 @@
   }
 
   .block-info {
-    padding: 20px 10px 0;
     gap: 4px;
     height: auto;
+    width: auto;
   }
 
   .footer {
@@ -2535,6 +2534,7 @@
 
   .v-info {
     max-width: 100%;
+    padding: 0px 0px 0px 16px;
     gap: 22px;
   }
 
