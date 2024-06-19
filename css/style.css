@@ -341,13 +341,9 @@
 }
 
 .button {
-  width: 280px;
-  height: 66px;
-  position: absolute;
-  left: 64px;
-  top: 569px;
   cursor: pointer;
-  z-index: 1;
+  width: 238px;
+  height: 66px;
 }
 
 .div2 {
@@ -415,20 +411,15 @@
   line-height: var(--subtitle-1-line-height, 28px);
   font-weight: var(--subtitle-1-font-weight, 500);
   position: absolute;
-  left: 64px;
-  top: 435px;
   width: 300px;
   height: 84px;
-  z-index: 1;
 }
 
 .divide {
   background: var(--blue-1, #192396);
   width: 60px;
   height: 4px;
-  position: absolute;
-  left: 64px;
-  top: 134px;
+  display: flex;
 }
 
 .person-screen-images {
@@ -453,10 +444,10 @@
 
 .rectangle-39986 {
   background: #ffffff;
-  width: 179px;
+  width: 180px;
   height: 962px;
   position: absolute;
-  left: -55px;
+  left: -90px;
   top: -45px;
   filter: blur(35px);
 }
@@ -469,9 +460,6 @@
   line-height: var(--h1-line-height, 72px);
   font-weight: var(--h1-font-weight, 900);
   text-transform: uppercase;
-  position: absolute;
-  left: 64px;
-  top: 184px;
   width: 910px;
   height: 216px;
   display: flex;
@@ -668,7 +656,6 @@
   justify-content: space-between;
   align-self: stretch;
   flex-shrink: 0;
-  height: 737px;
   position: relative;
 }
 
@@ -795,33 +782,70 @@
 
 .white-screen {
   flex-shrink: 0;
-  width: 1251px;
-  height: 856px;
+  max-width: 1251px;
+  height: auto;
   position: relative;
   object-fit: cover;
-  right: -160px;
 }
 
 .commercial-info {
   display: flex;
   flex-direction: row;
-  gap: 128px;
   align-items: center;
-  justify-content: space-between;
+  justify-content: space-around;
   align-self: stretch;
   flex-shrink: 0;
   position: relative;
 }
 
 .dark-screen {
-  flex-shrink: 0;
-  width: 1060px;
-  height: 774px;
+  width: 100%;
+  max-width: 1060px;
+  height: auto;
   position: relative;
   object-fit: cover;
   left: -119px;
 }
+.header-text-content {
+  padding: 0px 47px 0px 64px;
+  display: flex;
+  width: 50%;
+  height: 100%;
+  flex-direction: column;
+  z-index: 2;
+  top: 0px;
+  bottom: 0px;
+  justify-content: center;
+}
 
+.divide {
+  position: relative;
+  bottom: 22px;
+}
+
+.title {
+  position: relative;
+  display: flex;
+  width: 100%;
+  height: auto;
+  flex-direction: column;
+  justify-content: center;
+  z-index: 2;
+}
+
+.body2 {
+  position: relative;
+  width: 50%;
+  height: auto;
+  padding: 44px 0px 44px 0px;
+}
+
+.button {
+  position: relative;
+  width: 280px;
+  height: 66px;
+  z-index: 2;
+}
 .v-info {
   display: flex;
   flex-direction: column;
@@ -829,8 +853,8 @@
   align-items: flex-start;
   justify-content: flex-start;
   flex-shrink: 0;
-  width: 878px;
   position: relative;
+  max-width: 50%;
 }
 
 .commission {
@@ -1859,6 +1883,10 @@
   max-width: 215px;
 }
 
+.menus div .items {
+  cursor: pointer;
+}
+
 .product2 {
   display: flex;
   flex-direction: column;
@@ -2261,12 +2289,23 @@
   }
 
   .h-info {
+    gap: 32px;
     flex-direction: column;
   }
 
   .h-info div {
     width: 100%;
     gap: 32px;
+  }
+
+  .commercial-info {
+    flex-direction: row;
+    gap: 32px;
+  }
+
+  .dark-screen {
+    max-width: 611px;
+    height: auto;
   }
 
   .link,
@@ -2378,6 +2417,7 @@
     flex-direction: row;
     padding: 38px 24px 38px 24px;
   }
+
   .menu {
     gap: 0px;
   }
@@ -2401,8 +2441,29 @@
   }
 
   .product {
-    flex-wrap: wrap-reverse;
+    flex-direction: column-reverse;
     height: auto;
+    padding: 0px;
+    align-items: start;
+    gap: 22px;
+  }
+
+  .white-screen {
+    width: 100%;
+    height: auto;
+  }
+
+  .text-block {
+    width: 100%
+  }
+
+  .dispatcher {
+    width: 400px;
+  }
+
+  .inner-content {
+    padding: 0px 0px 0px 16px;
+    gap: 14px;
   }
 
   .main-menu {
@@ -2460,4 +2521,216 @@
     flex-direction: column;
   }
 
+  .commercial-info {
+    padding: 34px 0px 26px 0px;
+    flex-direction: column;
+    gap: 22px;
+  }
+
+  .dark-screen {
+    width: 100%;
+    height: auto;
+    left: auto;
+  }
+
+  .v-info {
+    max-width: 100%;
+    gap: 22px;
+  }
+
+  ._10,
+  ._15,
+  ._80,
+  ._25 {
+    width: auto;
+    height: auto;
+    max-width: 420px;
+    flex-direction: row;
+    display: flex;
+    padding: 18px 0px 0px 2px;
+    align-items: flex-start;
+    gap: 4px;
+    flex-shrink: 0;
+  }
+
+  ._102 {
+    height: 72px;
+    min-width: 138px;
+    font-size: 66px;
+    font-style: normal;
+    font-weight: 300;
+    text-align: center;
+    display: flex;
+    align-items: center;
+  }
+
+  .div4 {
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 20px;
+    flex: 1;
+  }
+
+  .content,
+  .body3 {
+    justify-content: start;
+    padding: 0px 0px 0px 0px;
+    gap: 0px;
+    width: 100%;
+    flex-direction: column;
+
+  }
+
+  .title2,
+  .body3 {
+    padding: 0px 0px 0px 16px;
+  }
+
+  .div7 {
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 24px;
+  }
+
+  li {
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 20px;
+  }
+
+  .title5 {
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 32px;
+  }
+
+  .management-info {
+    padding: 0px 0px 0px 16px;
+  }
+
+  .header {
+    height: 563px;
+  }
+
+  .header-text-content {
+    padding: 0px 0px 0px 16px;
+    display: flex;
+    width: auto;
+    flex-direction: column;
+    z-index: 2;
+    justify-content: start;
+  }
+
+  .divide {
+    position: relative;
+    top: 28px;
+  }
+
+  .title {
+    position: relative;
+    display: flex;
+    width: 328px;
+    height: 216px;
+    flex-direction: column;
+    justify-content: center;
+    font-size: 30px;
+    font-style: normal;
+    font-weight: 900;
+    line-height: 42px;
+    text-transform: uppercase;
+    z-index: 2;
+    top: 54px;
+  }
+
+  .body2 {
+    position: relative;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 26px;
+    top: 102px;
+    width: 241px;
+    height: auto;
+    padding: 0px 0px 0px 0px;
+  }
+
+  .button {
+    position: relative;
+    width: 280px;
+    height: 66px;
+    top: 140px;
+    z-index: 2;
+  }
+
+  .seperator {
+    left: 16px;
+    right: 16px;
+  }
+
+  .commission,
+  .smart .management .digitalization {
+    gap: 12px;
+  }
+
+  .body8 {
+    align-items: flex-start;
+    gap: 22px;
+  }
+
+  .check-up2 {
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 24px;
+  }
+
+  .consult-content {
+    gap: 22px;
+    padding: 44px 0px 44px 16px;
+  }
+
+  .description {
+    padding: 22px 16px 22px 16px;
+    gap: 0px;
+  }
+
+  .description div {
+    width: 100%;
+  }
+
+  .div10 {
+    font-size: 30px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 44px;
+    letter-spacing: 0.6px;
+    text-transform: uppercase;
+  }
+
+  .div11 {
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 24px;
+  }
+
+  .title6 div {
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 32px;
+  }
+
+  .full-form {
+    width: 100%;
+
+  }
+
+  .form2 {
+    padding: 16px 16px 16px 16px;
+  }
 }
