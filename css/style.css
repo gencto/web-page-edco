@@ -806,6 +806,7 @@
   object-fit: cover;
   left: -119px;
 }
+
 .header-text-content {
   padding: 0px 47px 0px 64px;
   display: flex;
@@ -846,6 +847,7 @@
   height: 66px;
   z-index: 2;
 }
+
 .v-info {
   display: flex;
   flex-direction: column;
@@ -2372,7 +2374,7 @@
     flex-direction: row;
     justify-content: space-between;
     gap: 0px;
-    width:auto;
+    width: auto;
   }
 
   .content2 {
@@ -2425,9 +2427,13 @@
 }
 
 @media (max-width: 480px) {
+  .header3 {
+    width: auto;
+  }
   .consult-content {
     flex-direction: column;
-    padding: 32px 0px 32px 16px;
+    width: auto;
+    padding: 32px 16px 32px 16px;
   }
 
   .model {
@@ -2439,7 +2445,7 @@
   .body9 {
     gap: 0px;
     height: auto;
-    flex-direction:column;
+    flex-direction: column;
   }
 
   .product {
@@ -2515,10 +2521,12 @@
 
   .contact {
     gap: 18px;
+
   }
 
   .consult-content {
     flex-direction: column;
+    justify-content: space-between;
   }
 
   .commercial-info {
@@ -2691,11 +2699,11 @@
 
   .consult-content {
     gap: 22px;
-    padding: 44px 0px 44px 16px;
+    padding: 44px 16px 44px 16px;
   }
 
   .description {
-    padding: 22px 16px 22px 16px;
+    padding: 22px 0px 22px 0px;
     gap: 0px;
   }
 
@@ -2732,13 +2740,34 @@
   }
 
   .body8 div {
-    width: 100%;
+    width: auto;
   }
+
   .form2 {
     padding: 16px 16px 16px 16px;
   }
+
   .mobile-images {
     width: 100%;
     height: auto;
+  }
+
+  .title8 {
+    font-size: 30px;
+    font-style: normal;
+    font-weight: 900;
+    line-height: 42px;
+    text-transform: uppercase;
+  }
+
+  .body10 {
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 24px;
+  }
+  .left {
+    width: 100%;
+    justify-content: space-between;
   }
 }
