@@ -2372,6 +2372,9 @@
   .contact2,
   .left {
     flex-direction: row;
+    justify-content: space-between;
+    gap: 0px;
+    width:auto;
   }
 
   .content2 {
@@ -2730,7 +2733,14 @@
 
   }
 
+  .body8 div {
+    width: 100%;
+  }
   .form2 {
     padding: 16px 16px 16px 16px;
+  }
+  .mobile-images {
+    width: 100%;
+    height: auto;
   }
 }
