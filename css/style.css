@@ -792,8 +792,6 @@
   flex-direction: row;
   align-items: center;
   justify-content: space-around;
-  align-self: stretch;
-  flex-shrink: 0;
   position: relative;
 }
 
@@ -803,7 +801,7 @@
   height: auto;
   position: relative;
   object-fit: cover;
-  left: -119px;
+  left: -20%;
 }
 
 .header-text-content {
@@ -1104,6 +1102,7 @@
   flex-direction: row;
   align-items: start;
   justify-content: space-around;
+  flex-wrap: wrap;
   align-self: stretch;
   flex-shrink: 0;
   position: relative;
@@ -1232,7 +1231,7 @@
 .image1 {
   border-radius: 8px;
   flex-shrink: 0;
-  width: 284px;
+  max-width: 284px;
   height: 316px;
   position: relative;
   overflow: hidden;
@@ -1251,7 +1250,7 @@
 .image3 {
   border-radius: 8px;
   flex-shrink: 0;
-  width: 584px;
+  max-width: 584px;
   height: 316px;
   position: relative;
   overflow: hidden;
@@ -1871,6 +1870,7 @@
   flex-direction: row;
   align-items: flex-start;
   justify-content: space-between;
+  flex-wrap: wrap;
   flex: 2;
   gap: 12px;
   position: relative;
@@ -2187,7 +2187,11 @@
   padding: 80px 64px 80px 64px;
 }
 
-@media (max-width: 1200px) {
+.rectangle-8 {
+  background-color: #fff;
+}
+
+@media (max-width: 1400px) {
   .management-info {
     flex-direction: column;
     align-items: start;
@@ -2252,7 +2256,7 @@
   }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1200px) {
 
   .model {
     width: 100%;
@@ -2421,9 +2425,66 @@
   .menu {
     gap: 0px;
   }
+
+  .white-screen {
+    width: 100%;
+    height: auto;
+  }
+
+  .header-text-content {
+    width: 100%;
+  }
+
+  .body2 {
+    width: 90%;
+    z-index: 3;
+  }
+
+  .images-containers {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(4, auto);
+    grid-gap: 20px;
+  }
+
+  .images-containers img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .image1 {
+    grid-column: 1;
+    grid-row: 1;
+  }
+
+  .image2 {
+    grid-column: 2;
+    grid-row: 1 / span 2;
+  }
+
+  .image3 {
+    grid-column: 1;
+    grid-row: 2 / span 2;
+  }
+
+  .image4 {
+    grid-column: 2;
+    grid-row: 3;
+  }
+
+  .image5 {
+    grid-column: 1;
+    grid-row: 4;
+  }
+
+  .image6 {
+    grid-column: 2;
+    grid-row: 4 / span 2;
+  }
 }
 
-@media (max-width: 480px) {
+@media (max-width: 768px) {
   .header3 {
     width: auto;
   }
@@ -2456,11 +2517,6 @@
     align-items: start;
     gap: 22px;
     flex-direction: column-reverse;
-  }
-
-  .white-screen {
-    width: 100%;
-    height: auto;
   }
 
   .text-block {
