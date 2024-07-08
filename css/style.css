@@ -2218,7 +2218,7 @@
   .title6 {
     padding: 0px;
     flex-wrap: wrap;
-    justify-content: center;
+    justify-content: flex-end;
   }
 
   .image1,
@@ -2277,6 +2277,10 @@
   .product {
     flex-wrap: wrap-reverse;
     height: auto;
+  }
+
+  .management-info-text-box {
+    flex-direction: column;
   }
 
   .digitalization {
@@ -2703,7 +2707,9 @@
   }
 
   .management-info {
-    padding: 0px 16px 0px 16px;
+    padding: 0px 16px 22px 16px;
+    align-items: center;
+    gap: 0;
   }
 
   .header {
@@ -2880,8 +2886,16 @@
   }
 
   .mobile-images {
-    width: 100%;
-    height: auto;
+    width: 200px;
+    margin: 0;
+  }
+
+  .management-info-text-box {
+    flex-direction: column;
+  }
+
+  .div14 {
+    justify-content: flex-start;
   }
 
   .title8 {
