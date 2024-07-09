@@ -971,12 +971,13 @@
 .h-info {
   display: flex;
   flex-direction: row;
-  gap: 82px;
+  /* gap: 82px; */
   align-items: flex-start;
   justify-content: flex-start;
   flex-wrap: wrap;
   flex-shrink: 0;
   position: relative;
+  padding-bottom: 32px;
 }
 
 .management {
@@ -2254,7 +2255,7 @@
   .title6 {
     padding: 0px;
     flex-wrap: wrap;
-    justify-content: flex-end;
+    justify-content: flex-start;
   }
 
   .image1,
@@ -2340,6 +2341,7 @@
 
   .management-info-text-box {
     flex-direction: column;
+    /* flex-wrap: nowrap; */
   }
 
   .digitalization {
@@ -2972,8 +2974,8 @@
   }
 
   .mobile-images {
-    width: 200px;
-    margin: 0;
+    /* width: 200px; */
+    margin: 0 -100px;
   }
 
   .management-info-text-box {
@@ -2981,7 +2983,8 @@
   }
 
   .div14 {
-    justify-content: flex-start;
+    justify-content: center;
+    /* flex: 0 0 auto; */
   }
 
   .title8 {
