@@ -2304,6 +2304,29 @@
 
 @media (max-width: 1200px) {
 
+  .menu {
+    flex-direction: column;
+  }
+
+
+
+  .menu__subBox div {
+    display: block;
+    margin: 5px 0px;
+  }
+
+  .menu__subBox {
+    display: none;
+    height: auto;
+    position: absolute;
+    z-index: 5;
+    top: calc(70% + 8px);
+    padding: 10px;
+    background: #fff;
+    border: 1px solid #000;
+    border-radius: 8px;
+  }
+
   .model {
     width: 100%;
     gap: 0px;
@@ -2540,13 +2563,9 @@
     width: auto;
   }
 
-
-
   .menu {
     flex-direction: column;
-  }
-
- 
+  } 
 
   .menu__subBox div {
     display: block;
