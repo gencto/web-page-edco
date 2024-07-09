@@ -1261,6 +1261,7 @@
   display: flex;
   align-items: center;
   justify-content: flex-end;
+  white-space: nowrap;
 }
 
 .images-containers {
@@ -2335,13 +2336,12 @@
   }
 
   .product {
-    flex-wrap: wrap-reverse;
+    /* flex-wrap: wrap-reverse; */
     height: auto;
   }
 
   .management-info-text-box {
     flex-direction: column;
-    /* flex-wrap: nowrap; */
   }
 
   .digitalization {
@@ -2521,6 +2521,7 @@
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(4, auto);
     grid-gap: 20px;
+    place-items: center;
   }
 
   .images-containers img {
