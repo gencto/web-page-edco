@@ -49,6 +49,11 @@
 </head>
 
 <body>
+
+    <div class="return__btn hidden">
+        <img class="icon-button-arrow-1" src="./img/icon-button-arrow-10.svg" />
+    </div>
+
     <div class="body">
         <div class="main-menu">
             <div class="logo">
@@ -57,17 +62,17 @@
             <div class="menu">
                 <div class="menu-title" data-translate="menu-title">Меню</div>
                 <div class="menu__subBox">
-                    <a href="#products">
-                        <div class="link" data-translate="products">Продукти</div>
+                    <a href="#"  >
+                        <div class="link" data-translate="products" data-goto="#products" >Продукти</div>
                     </a>
-                    <a href="#industries">
-                        <div class="link" data-translate="industries">Галузі</div>
+                    <a href="#">
+                        <div class="link" data-translate="industries" data-goto="#industries" >Галузі</div>
                     </a>
-                    <a href="#service">
-                        <div class="link" data-translate="service">Сервіс</div>
+                    <a href="#">
+                        <div class="link" data-translate="service" data-goto="#service" >Сервіс</div>
                     </a>
-                    <a href="#contacts">
-                        <div class="link" data-translate="contacts">Контакти</div>
+                    <a href="#">
+                        <div class="link" data-translate="contacts" data-goto="#contacts" >Контакти</div>
                     </a>
                 </div>
                 
@@ -105,10 +110,10 @@
                     форматі в рамках одного сервісу
                 </div>
 
-                <div class="button">
-                    <a href="#form">
-                        <div class="rectangle-8"></div>
-                        <div class="div2" data-translate="try_now">Спробувати зараз</div>
+                <div class="button" data-goto="#form" >
+                    <a href="#">
+                        <div class="rectangle-8" data-goto="#form" ></div>
+                        <div class="div2" data-translate="try_now" data-goto="#form" >Спробувати зараз</div>
                         <div class="ellipse-8"></div>
                         <img class="icon-button-arrow-1" src="./img/icon-button-arrow-10.svg" />
                     </a>                    
