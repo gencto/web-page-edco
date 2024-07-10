@@ -20,6 +20,7 @@ document.addEventListener("DOMContentLoaded", function() {
             document.querySelectorAll("[data-translate]").forEach(el => {
                 const key = el.getAttribute("data-translate");
                 el.textContent = translations[key];
+                el.placeholder = translations[key];
             });
         } catch (error) {
             console.error("Error loading language:", error);
