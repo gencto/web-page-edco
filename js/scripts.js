@@ -108,5 +108,46 @@ document.addEventListener("DOMContentLoaded", function() {
         document.body.classList.add('pc');//для пк-скрінов
     }
 
+    //плавне прокручування
+    const menuLinks = document.querySelectorAll('div[data-goto]');
+    if (menuLinks.length > 0) {
+        menuLinks.forEach (element => {
+            element.addEventListener('click', onMenuLinkCkick);
+        });
+
+        function onMenuLinkCkick (e) {
+            const menuLink = e.target;
+            if (menuLink.dataset.goto && document.querySelector(menuLink.dataset.goto)) {
+                const gotoBlock = document.querySelector(menuLink.dataset.goto);
+                const gotoBlockValue = gotoBlock.getBoundingClientRect().top + scrollY;
+                window.scrollTo ({
+                    top: gotoBlockValue,
+                    behavior: 'smooth'
+                });
+                e.preventDefault();
+
+            }
+        }
+    }
+
+    const returnBtn = document.querySelector('.return__btn');
+
+    document.addEventListener('scroll', function () {
+        console.log('scrollY: ', scrollY);
+        if (scrollY >= 100) {
+            returnBtn.classList.remove('hidden');
+        }else{
+            returnBtn.classList.add('hidden');
+        };
+    });
+
+    returnBtn.addEventListener('click', function () {
+        window.scrollTo({
+            top: 0,
+            left: 0,
+            behavior: 'smooth'
+        })
+    })
+
 
 });
