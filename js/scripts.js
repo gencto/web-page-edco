@@ -133,7 +133,6 @@ document.addEventListener("DOMContentLoaded", function() {
     const returnBtn = document.querySelector('.return__btn');
 
     document.addEventListener('scroll', function () {
-        console.log('scrollY: ', scrollY);
         if (scrollY >= 100) {
             returnBtn.classList.remove('hidden');
         }else{
