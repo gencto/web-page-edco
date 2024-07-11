@@ -117,7 +117,7 @@
   justify-content: center;
   flex-wrap: nowrap;
   flex: 1;
-  height: 22px;
+  /* height: 22px; */
   max-width: 520px;
   gap: 40px;
 }
@@ -126,7 +126,8 @@
   flex-shrink: 0;
   flex: 1;
   width: auto;
-  height: 25px;
+  /* height: 25px; */
+  padding: 10px;
 }
 
 .link {
@@ -139,6 +140,12 @@
   font-weight: 400;
   cursor: pointer;
 }
+
+.link:hover{
+  background: #f1f1f1;
+  border-radius: 8px;
+}
+
 
 .buttons {
   display: flex;
@@ -1614,6 +1621,14 @@
   position: relative;
 }
 
+.privacy {
+  display: none;
+}
+
+.privacy:checked + .rect::after{
+  transform: scale(1);
+}
+
 .checkbox-light {
   flex-shrink: 0;
   width: 16px;
@@ -1634,7 +1649,23 @@
   left: 0%;
   bottom: 0%;
   top: 0%;
+
+  cursor: pointer;
 }
+
+.rect::after {
+  content: "";
+  width: 10px;
+  height: 10px;
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  background-color: #7a956b;
+  border-radius: 2px;
+  transition: transform 0.5s ease 0s;
+  transform: scale(0);
+}
+
 
 .privacy-policy {
   color: var(--grey, #bbbbbb);
@@ -1645,6 +1676,8 @@
   font-weight: var(--hint-font-weight, 400);
   position: relative;
   flex: 1;
+
+  cursor: pointer;
 }
 
 .button2 {
@@ -1761,10 +1794,6 @@
   position: relative;
 }
 
-.contact2 div {
-  cursor: pointer;
-}
-
 .light-tel {
   display: flex;
   flex-direction: row;
@@ -1844,6 +1873,11 @@
   align-self: stretch;
   flex-shrink: 0;
   position: relative;
+  cursor: pointer;
+}
+
+.light-mail div {
+  pointer-events: none;
 }
 
 .black4 {

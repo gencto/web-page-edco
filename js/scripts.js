@@ -117,6 +117,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
         function onMenuLinkCkick (e) {
             const menuLink = e.target;
+            console.log('e.target: ', e.target);
             if (menuLink.dataset.goto && document.querySelector(menuLink.dataset.goto)) {
                 const gotoBlock = document.querySelector(menuLink.dataset.goto);
                 const gotoBlockValue = gotoBlock.getBoundingClientRect().top + scrollY;
@@ -133,7 +134,6 @@ document.addEventListener("DOMContentLoaded", function() {
     const returnBtn = document.querySelector('.return__btn');
 
     document.addEventListener('scroll', function () {
-        console.log('scrollY: ', scrollY);
         if (scrollY >= 100) {
             returnBtn.classList.remove('hidden');
         }else{
