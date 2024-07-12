@@ -500,7 +500,19 @@
   top: 0px;
   bottom: 0px;
   overflow: hidden;
+
+  transform: translate(10%, 0px);
+  opacity: 0;
+  transition: all 0.8s ease 0s;
 }
+
+.person-screen-images.active {
+  transform: translate(0px, 0px);
+  opacity: 1;
+}
+
+
+
 
 .firefly-hi-tech-1-2 {
   background: linear-gradient(85.85deg,
@@ -535,7 +547,7 @@
   display: flex;
   align-items: center;
   justify-content: flex-start;
-  word-wrap: break-word
+ 
 }
 
 .advantages {
@@ -616,6 +628,15 @@
   width: 350px;
   height: 280px;
   position: relative;
+
+  transform: translate(10%, 0px);
+  opacity: 0;
+  transition: all 0.8s ease 0s;
+}
+
+._10.active {
+  transform: translate(0px, 0px);
+  opacity: 1;
 }
 
 ._102 {
@@ -654,6 +675,15 @@
   width: 350px;
   height: 280px;
   position: relative;
+
+  transform: translate(10%, 0px);
+  opacity: 0;
+  transition: all 0.8s ease 0s;
+}
+
+._15.active {
+  transform: translate(0px, 0px);
+  opacity: 1;
 }
 
 ._80 {
@@ -670,6 +700,16 @@
   width: 350px;
   height: 280px;
   position: relative;
+
+  transform: translate(10%, 0px);
+  opacity: 0;
+  transition: all 0.8s ease 0s;
+}
+
+._80.active {
+  transform: translate(0px, 0px);
+  opacity: 1;
+  transition: all 0.8s ease 0.2s;
 }
 
 ._25 {
@@ -686,6 +726,16 @@
   width: 350px;
   height: 280px;
   position: relative;
+
+  transform: translate(10%, 0px);
+  opacity: 0;
+  transition: all 0.8s ease 0s;
+}
+
+._25.active {
+  transform: translate(0px, 0px);
+  opacity: 1;
+  transition: all 0.8s ease 0.2s;
 }
 
 .spacer-title {
@@ -695,6 +745,15 @@
   position: relative;
   padding: 44px 64px 44px 64px;
   gap: 20px;
+
+  opacity: 0;
+  transform: scale(0.5);
+  transition: all 2s ease 0s;
+}
+
+.spacer-title.active {
+  opacity: 1;
+  transform: scale(1);
 }
 
 .div5,
@@ -899,6 +958,15 @@
   flex-direction: column;
   justify-content: center;
   z-index: 2;
+
+  transform: translate(0px, 10%);
+  opacity: 0;
+  transition: all 0.8s ease 0s;
+}
+
+.title.active {
+  transform: translate(0px, 0px);
+  opacity: 1;
 }
 
 .body2 {
@@ -906,6 +974,16 @@
   width: 50%;
   height: auto;
   padding: 44px 0px 44px 0px;
+
+  transform: translate(0px, 10%);
+  opacity: 0;
+  transition: all 0.8s ease 0s;
+}
+
+.body2.active {
+  transform: translate(0px, 0px);
+  opacity: 1;
+  transition: all 0.8s ease 0.4s;
 }
 
 .button {
@@ -2499,6 +2577,7 @@
   .div5,
   .div6 {
     font-size: 60px;
+    justify-content: center;
   }
 
   .contact {
