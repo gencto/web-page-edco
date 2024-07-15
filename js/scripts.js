@@ -12,7 +12,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
     
     
-    // Функция загрузки перевода для выбранного языка
+    
     const loadLanguage = async (lang) => {
         try {
             const response = await fetch(`./languages/${lang}.json`);
@@ -27,7 +27,7 @@ document.addEventListener("DOMContentLoaded", function() {
         }
     };
 
-    // Функция переключения отображения списка языков
+    
     const toggleLanguageOptions = (event) => {
         languageOptions.style.display = languageOptions.style.display === "block" ? "none" : "block";
     };
@@ -36,16 +36,16 @@ document.addEventListener("DOMContentLoaded", function() {
         languageOptionsMob.style.display = languageOptionsMob.style.display === "block" ? "none" : "block";
     };
 
-    // Функция переключения языка и сохранения в localStorage
+    
     const switchLanguage = (lang) => {
         localStorage.setItem("selectedLanguage", lang);
-        currentLanguage.textContent = lang === "uk" ? "Ukr" : "Eng"; // Обновляем отображаемый язык
+        currentLanguage.textContent = lang === "uk" ? "Ukr" : "Eng"; 
         loadLanguage(lang).then(() => {
             languageOptions.style.display = "none";
         });
     };
 
-    // Получаем выбранный язык из localStorage или устанавливаем по умолчанию
+    
     const selectedLanguage = localStorage.getItem("selectedLanguage") || "uk";
     currentLanguage.textContent = selectedLanguage === "uk" ? "Ukr" : "Eng";
     loadLanguage(selectedLanguage);
@@ -65,21 +65,21 @@ document.addEventListener("DOMContentLoaded", function() {
         }
     });
 
-    // Закрытие выпадающего списка при клике вне его области
+    
     document.addEventListener("click", (event) => {
         if (!languageSwitcher.contains(event.target)) {
             languageOptions.style.display = "none";
         }
     });
 
-    // Закрытие выпадающего списка при клике вне его области
+    
     document.addEventListener("click", (event) => {
         if (!languageSwitcherMob.contains(event.target)) {
             languageOptionsMob.style.display = "none";
         }
     });
 
-    // Функция переключения отображения списка мобильного меню
+    
     const toggleMobMenuOptions = () => {
         mobMenuField.style.display = mobMenuField.style.display === "block" ? "none" : "block";
     };
@@ -89,15 +89,15 @@ document.addEventListener("DOMContentLoaded", function() {
     mobMenuSwitcher.addEventListener("click", toggleMobMenuOptions);
 
 
-    //перевіряємо на якому пристрої відкрито сторінку
+    
     if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
-        document.body.classList.add('_touch');//для тач-скрінов
+        document.body.classList.add('_touch');
 
                 mobMenuItems.forEach( i => {
                      i.addEventListener("click", toggleMobMenuOptions);
                 });
 
-                // Закрытие выпадающего списка мобильного меню при клике вне его области
+                
                 document.addEventListener("click", (event) => {
                     if (!mobMenuSwitcher.contains(event.target)) {
                         mobMenuField.style.display = "none";
@@ -105,10 +105,10 @@ document.addEventListener("DOMContentLoaded", function() {
                 });
 
       } else {
-        document.body.classList.add('pc');//для пк-скрінов
+        document.body.classList.add('pc');
     }
 
-    //плавне прокручування
+    
     const menuLinks = document.querySelectorAll('div[data-goto]');
     if (menuLinks.length > 0) {
         menuLinks.forEach (element => {
